@@ -156,7 +156,7 @@ function handleFileSelect(evt) {
 	var files = evt.target.files; // FileList object
 	if (files.length == 0)
 		return;
-  document.getElementById('outputFilename').value = 'spray';
+  document.getElementById('outputFilename').value = files[0].name.replace(/\.[^/.]+$/, "");
 	document.getElementById('saveButton').disabled = true;
 	document.getElementById('files0').disabled = true;
 	
